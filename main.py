@@ -1,4 +1,10 @@
-import pygame, sys, asyncio
+import sys, asyncio, os
+
+try:
+    import pygame
+except ImportError:
+    os.system(f"{sys.executable} -m pip install pygame")
+    import pygame
 
 pygame.init()
 
